@@ -1,0 +1,11 @@
+101|Arun Kumar|arun@gmail.com|85.0|92|ACTIVE
+102|Priya Sharma|priya@gmail.com|95.0|88|ACTIVE
+103|Karthik Raj|karthik@gmail.com|72.0|78|ACTIVE
+104|Divya S|divya@gmail.com|64.0|91|COMPLETED
+105|Rahul M|rahul@gmail.com|48.0|65|INACTIVE
+106|Vijay Kumar|vijay@gmail.com|89.0|95|ACTIVE
+107|Sneha R|sneha@gmail.com|76.0|82|ACTIVE
+108|Manoj S|manoj@gmail.com|45.0|75|ACTIVE
+109|Keerthana P|keerthana@gmail.com|91.0|96|ACTIVE
+110|Ajay Kumar|ajay@gmail.com|68.0|85|COMPLETED
+111|sam|sam@gmail.com|67.0|55|INACTIVE
