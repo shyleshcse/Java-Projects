@@ -1,0 +1,428 @@
+{
+  "info": {
+    "name": "Library Book Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1 Add book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookName\": \"Spring in Action\",\n  \"author\": \"Craig Walls\",\n  \"price\": 650.0,\n  \"available\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "2 Get all books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3 Get book by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "4 Update book",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/books/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "2"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookName\": \"Effective Java 3rd Edition\",\n  \"author\": \"Joshua Bloch\",\n  \"price\": 750.0,\n  \"available\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "5 Patch availability",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/1/availability?available=false",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "1",
+            "availability"
+          ],
+          "query": [
+            {
+              "key": "available",
+              "value": "false"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "6 Delete book",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "3"
+          ]
+        }
+      }
+    },
+    {
+      "name": "7 Search by name (contains)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/search?keyword=java",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "keyword",
+              "value": "java"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "8 By author (equalsIgnoreCase)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/author?name=Joshua Bloch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "author"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "Joshua Bloch"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "9 Available books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/available",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "available"
+          ]
+        }
+      }
+    },
+    {
+      "name": "10 Price max",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/price/max?value=500",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "price",
+            "max"
+          ],
+          "query": [
+            {
+              "key": "value",
+              "value": "500"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "11 Price range",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/price/range?min=400&max=600",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "price",
+            "range"
+          ],
+          "query": [
+            {
+              "key": "min",
+              "value": "400"
+            },
+            {
+              "key": "max",
+              "value": "600"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ERR Validation fails",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookName\": \"\",\n  \"author\": \"\",\n  \"price\": -5,\n  \"available\": null\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "ERR Book not found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/99",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "99"
+          ]
+        }
+      }
+    },
+    {
+      "name": "ERR Duplicate book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookName\": \"Clean Code\",\n  \"author\": \"Robert Martin\",\n  \"price\": 500.0,\n  \"available\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "ERR Bad price range",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/price/range?min=900&max=100",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "price",
+            "range"
+          ],
+          "query": [
+            {
+              "key": "min",
+              "value": "900"
+            },
+            {
+              "key": "max",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ERR Missing param",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "search"
+          ]
+        }
+      }
+    }
+  ]
+}
